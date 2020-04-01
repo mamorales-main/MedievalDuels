@@ -1,0 +1,81 @@
+<ion-header>
+
+
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]="['/ajustes']">
+        <ion-icon ios="ios-settings" md="md-settings"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Selección de Personaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+
+  <div *ngFor="let per of personajescargados">
+    <div *ngFor="let pepe of per">
+
+      <ion-card class="CardPersonajes" button="true" type="submit" color="primary">
+        <ion-card-header (click)="mostrar(pepe.nombre)">
+          <ion-card-title id="{{pepe.nombre}}" class="texto">{{ pepe.nombre }}</ion-card-title>
+        </ion-card-header>
+        <div *ngFor="let detalles of detallespersonajeseleccionado">
+          <div  *ngIf="detalles[0]?.nombre == pepe.nombre">
+            <ion-list>
+              <ion-item>
+                <ion-label>Nivel:</ion-label>
+                <ion-note slot="end" color="primary">{{ detalles[0].nivel }}</ion-note>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Experiencia:</ion-label>
+                <ion-note slot="end" color="primary">{{ detalles[0].exp }}</ion-note>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Saldo:</ion-label>
+                <ion-note slot="end" color="primary">{{ detalles[0].saldo }}</ion-note>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Clase: </ion-label>
+                <ion-note slot="end" color="secondary">{{ detalles[0].clase }}</ion-note>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Fuerza: </ion-label>
+                <ion-note slot="end" color="tertiary">{{ detalles[0].fuerza }}</ion-note>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Destreza: </ion-label>
+                <ion-note slot="end" color="success">{{ detalles[0].destreza }}</ion-note>
+              </ion-item>
+
+              <ion-item>
+                <ion-label>Inteligencia: </ion-label>
+                <ion-note slot="end" color="warning">{{ detalles[0].inteligencia }}</ion-note>
+              </ion-item>
+            </ion-list>
+
+            <ion-button (click)="go()" color="primary">¡Jugar!</ion-button>
+
+          </div>
+
+        </div>
+
+      </ion-card>
+
+
+    </div>
+
+  </div>
+
+  <ion-button id="crearpersonaje" (click)="nuevopersonaje()" color="primary">Crear nuevo personaje</ion-button>
+
+
+
+</ion-content>

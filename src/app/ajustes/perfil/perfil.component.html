@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="edit()">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-button color="primary" [routerLink]="['/ajustes']"><ion-icon name="arrow-back"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" slot="fixed" >
+    <div class="card">
+      <div class="header">
+        <div class="avatar">
+          <img [src]="url + this.datosusuario.detallesusuario.img" alt="">
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="user-datos ion-text-center">
+          <h3 class="nombre">{{this.datosusuario.detallesusuario.nombre}} {{this.datosusuario.detallesusuario.apellidos}}</h3>
+          <h5 class="pais">{{this.datosusuario.detallesusuario.pais}}</h5>
+          <h6 class="telefono"> {{this.datosusuario.detallesusuario.telefono}}
+          </h6>
+        </div>
+
+      </div>
+    </div>
+</ion-content>
+

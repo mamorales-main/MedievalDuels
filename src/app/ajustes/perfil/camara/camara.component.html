@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" [routerLink]="['/ajustes/perfil/editar']"><ion-icon name="arrow-back"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="volver()"><ion-icon name="checkmark"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Editar perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-button (click)="hacerFoto()">Hacer foto</ion-button>
+
+  <div class="card" *ngIf="foto">
+    <div class="header">
+      <div class="avatar">
+        <img [src]="foto" alt="">
+      </div>
+    </div>
+  </div>
+</ion-content>

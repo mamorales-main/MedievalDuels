@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" [routerLink]="['/ajustes/perfil']"><ion-icon name="arrow-back"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="edit()"><ion-icon name="camera"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Editar perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen="true" slot="fixed" >
+  <div class="card">
+    <div class="header">
+      <div class="avatar">
+        <img [src]="url + this.datosusuario.detallesusuario.img" alt="">
+      </div>
+    </div>
+  </div>
+
+
+  <form  #feditar="ngForm" (ngSubmit)="editar(feditar)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div padding>
+            <ion-item>
+              <ion-label position="floating">Nombre</ion-label>
+              <ion-input  name="nombre" type="text" placeholder="" [(ngModel)] = "editarusuario.nombre" text-capitalize></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Apellidos</ion-label>
+              <ion-input  name="apellidos" type="text" placeholder="" [(ngModel)] = "editarusuario.apellidos" text-capitalize></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Telefono</ion-label>
+              <ion-input  name="telefono" type="text" placeholder="" [(ngModel)] = "editarusuario.telefono"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">País</ion-label>
+              <ion-input name="pais" type="text" placeholder="" [(ngModel)] = "editarusuario.pais" text-capitalize></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Correo</ion-label>
+              <ion-input name="email" type="email" placeholder="" [(ngModel)]="this.login" readonly></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input name="pass" type="password" placeholder="" [(ngModel)] = "editarusuario.password"></ion-input>
+            </ion-item>
+          </div>
+
+          <div padding>
+            <ion-button  size="large" type="submit" expand="block">Actualizar perfil</ion-button>
+          </div>
+
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+</ion-content>

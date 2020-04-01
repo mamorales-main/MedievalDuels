@@ -1,0 +1,40 @@
+<ion-content>
+    <gl-background-video src="assets/video-public/video.mp4"  codecs="h.264" poster="assets/video-public/frame.png"></gl-background-video>
+<ion-grid>
+
+    <ion-row justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12" padding>
+            <div text-center>
+                <img src="../../../assets/logo.png">
+            </div>
+            <form (ngSubmit)="login(flogin)" #flogin="ngForm">
+            <div padding>
+                <ion-item>
+                    <ion-input name="login" type="text" placeholder="Usuario" [(ngModel)] = "loginUser.login" required minlength="5"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input name="password" type="password" placeholder="Contraseña" [(ngModel)]="loginUser.password" required minlength="5"></ion-input>
+                </ion-item>
+            </div>
+            <div padding>
+                <ion-button size="large" expand="block" type="submit">Login</ion-button>
+                <a (click)="registrate()" padding>
+                    <span class="reducir">
+                        <ion-icon name='contact' is-active="false"></ion-icon>
+                        ¿No tienes cuenta? Regístrate aquí.
+                    </span>
+                </a>
+            </div>
+            </form>
+            <div class="padding">
+
+            </div>
+        </ion-col>
+    </ion-row>
+</ion-grid>
+</ion-content>
+
+
+
+

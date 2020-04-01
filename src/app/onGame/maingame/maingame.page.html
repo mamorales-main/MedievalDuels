@@ -1,0 +1,48 @@
+<ion-content>
+  <div (click)="this.reloadingData()" >
+  <canvas id="myCanvas" (click)="tap()" class="hola"></canvas>
+
+    <!--<ion-item>
+          <ion-img [src]="ruta + clase + '.gif'" class="imagen"></ion-img>
+    </ion-item>-->
+  </div>
+<div id="stats" padding *ngIf="check">
+  <ion-list>
+    <ion-item>
+      <ion-label>Nivel:</ion-label>
+      <ion-note slot="end" color="primary">{{ this.detallesActual.nivel }}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Experiencia:</ion-label>
+      <ion-note slot="end" color="primary">{{ this.detallesActual.exp }}/{{this.detallesActual.expreq}}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Saldo:</ion-label>
+      <ion-note slot="end" color="primary">{{ this.detallesActual.saldo }}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Clase: </ion-label>
+      <ion-note slot="end" color="secondary">{{ this.detallesActual.clase }}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fuerza: </ion-label>
+      <ion-note slot="end" color="tertiary">{{ this.detallesActual.fuerza }}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Destreza: </ion-label>
+      <ion-note slot="end" color="success">{{ this.detallesActual.destreza }}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Inteligencia: </ion-label>
+      <ion-note slot="end" color="warning">{{ this.detallesActual.inteligencia }}</ion-note>
+    </ion-item>
+  </ion-list>
+</div>
+<div class="alto"></div>
+</ion-content>

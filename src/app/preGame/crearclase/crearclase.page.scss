@@ -1,0 +1,28 @@
+ion-toolbar{
+    --background:  rgb(90, 0, 0);
+    --color: rgb(255, 255, 255);
+
+}
+
+
+ion-content{
+    --background: rgb(27, 27, 27) url('../../../assets/muro.jpg') no-repeat center center / cover;
+}
+
+ion-content>*{
+
+    --background:  rgb(24, 24, 24);
+    --color: rgb(255,255,255);
+    
+}
+
+ion-icon{
+    color: rgb(255,255,255);
+}
+
+ion-item{
+    background-color: rgb(24, 24, 24);
+    --background: rgb(27, 27, 27);
+    --color: rgb(255,255,255);
+
+}

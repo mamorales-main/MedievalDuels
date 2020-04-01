@@ -1,0 +1,30 @@
+ion-toolbar{
+    --background:  rgb(90, 0, 0);
+    --color: rgb(255, 255, 255);
+
+}
+
+
+ion-content{
+    --background: #fff url('../../../assets/muro.jpg') no-repeat center center / cover;
+}
+
+#crearpersonaje {
+    
+    margin-left: 25%;
+    bottom: 10px;
+    right: 0;
+    width: 55%;
+    font-size: 3vw; 
+}
+
+ion-list{
+    --background:  rgb(27, 27, 27) !important;
+    background-color: rgb(90, 0, 0) !important;
+    color: rgb(255,255,255);
+}
+
+ion-item{
+    --background:  rgb(50, 50, 50) !important;
+    color: rgb(255,255,255);
+}

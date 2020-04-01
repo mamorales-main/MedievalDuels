@@ -1,0 +1,51 @@
+ion-header {
+    height: 20%;
+}
+ion-toolbar{
+    --background:  rgb(90, 0, 0);
+    --color: rgb(255, 255, 255);
+    height: 100%;
+    padding: 2%;
+    display: block;
+    
+  }
+  
+  
+  ion-content{
+    --background: rgb(27, 27, 27) url('../../../assets/muro.jpg') no-repeat center center / cover;
+  }
+  
+  ion-content>*{
+  
+    --background:  rgb(24, 24, 24);
+    color: rgb(255,255,255);
+    
+  }
+  
+  ion-icon{
+    color: rgb(255,255,255);
+  }
+  
+  ion-item{
+    --background: rgb(90, 0, 0);
+    
+  }
+  ion-list{
+    background-color: rgb(90, 0, 0);
+  }
+  ion-list>*{
+    --background: rgb(44, 44, 44);
+    color: rgb(255,255,255)
+  }
+  ion-text {
+    padding: 2%;
+    font-size: 5vh;
+    display: block;
+    width: 100%;
+  }
+  .imagen {
+      border: rgb(90, 0, 0),1,1;
+      border-radius: 25px;
+      width: 30%;
+      height: 30%;
+  }

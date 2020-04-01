@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" [routerLink]="['/seleccionpersonaje']" routerDirection="Root"><ion-icon name="arrow-back"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Creación de Personaje</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+    <h1 padding>Plantillas</h1>
+  <div *ngFor="let plantilla of plantillasrecogidas" >
+
+    <div *ngFor="let statsplantillas of plantilla">
+      <ion-card *ngIf="statsplantillas.clase!=''" id={{statsplantillas.clase}}  button="yes" (click)="(getPlantillaSeleccionada(statsplantillas.clase))" padding>{{ statsplantillas.clase }}</ion-card>
+    </div>
+
+  </div>
+  <form #fnew="ngForm" (ngSubmit)="newpersonaje2(fnew)">
+  <div padding>
+    <ion-item>
+      <ion-input  name="nombre" type="text" placeholder="Nombre" [(ngModel)] = "personajeCreado.nombre" required></ion-input>
+    </ion-item>
+  </div>
+  <div padding>
+    <ion-button  size="large" type="submit" expand="block">Crear personaje</ion-button>
+  </div>
+  </form>
+
+</ion-content>

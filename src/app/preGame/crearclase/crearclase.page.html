@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>crearclase</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form #fnew="ngForm" (ngSubmit)="crearclase(fnew)">
+    <div padding>
+      <ion-item>
+        <ion-input name="nombre" type="text" placeholder="Nombre" [(ngModel)] = "this.clasecreada.clase" required></ion-input>
+      </ion-item>
+    </div>
+
+    <ion-item>
+      <ion-range min="0" max="3000" color="success" pin="true" step="100" id="destreza" (ionChange)="cambiardestreza($event)">
+        <fa-icon [icon]="faRunning" slot="end" slot="start"></fa-icon>
+
+
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">3000</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="0" max="3000" color="danger" pin="true" step="100" id="fuerza"  (ionChange)="cambiarfuerza($event)">
+        <fa-icon [icon]="faFistRaised" slot="end" slot="start"></fa-icon>
+
+
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">3000</ion-label>
+      </ion-range>
+    </ion-item>
+
+    <ion-item>
+      <ion-range min="0" max="3000" color="secondary" pin="true" step="100" id="inteligencia" (ionChange)="cambiarinteligencia($event)">
+        <fa-icon [icon]="faGraduationCap" slot="end" slot="start"></fa-icon>
+
+
+        <ion-label slot="start">0</ion-label>
+        <ion-label slot="end">3000</ion-label>
+      </ion-range>
+    </ion-item>
+
+
+    <ion-item color="danger" *ngIf="total>3000">
+      <ion-label class="ion-padding" >{{total}}</ion-label>
+      <ion-button disabled>
+        Crear Personaje
+      </ion-button>
+    </ion-item>
+    
+    <ion-item color="success" *ngIf="total<=3000">
+      <ion-label class="ion-padding" >{{total}}</ion-label>
+      <ion-button (click)="crearclase()">
+        Crear Clase
+      </ion-button>
+      
+    </ion-item>
+
+
+    </form>
+</ion-content>

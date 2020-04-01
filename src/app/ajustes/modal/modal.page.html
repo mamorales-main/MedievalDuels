@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="primary" (click)="modalClose()"><ion-icon name="arrow-back"></ion-icon></ion-button>
+    </ion-buttons>
+    <ion-title>Mi ubicación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab horizontal="end" vertical="top" slot="fixed" edge>
+    <ion-fab-button (click)="share()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-card *ngIf="resultado">
+    <img [src]="this.url"/>
+    <ion-card-header>
+      <ion-card-title>¿Dónde estoy?</ion-card-title>
+    </ion-card-header>
+    <ion-card-content >
+      País: {{result.countryName}}<br />
+      Comunidad: {{result.administrativeArea}}<br />
+      Provincia: {{result.subAdministrativeArea}}<br />
+      Localidad: {{result.locality}}<br />
+      Código postal: {{result.postalCode}}<br />
+      Calle(aprox): {{result.thoroughfare}}<br />
+      Número(aprox): {{result.subThoroughfare}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+
+

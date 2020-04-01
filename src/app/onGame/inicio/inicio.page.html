@@ -1,0 +1,18 @@
+<ion-header *ngIf="check">
+  <ion-toolbar>
+    <p>
+      Personaje: {{this.detallesActual.nombre}}
+    </p>
+    <p>
+      Nivel: {{this.detallesActual.nivel}}
+    </p>
+    <p>
+      Saldo: {{this.detallesActual.saldo}}
+    </p>
+    <ion-img [src]="ruta + clase + '.gif'" class="imagen" slot="end" padding></ion-img>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
